@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class KaprekarTest {
+
+
     @Test
     public void testKaprekarOperation1() {
         // Prueba con el número 3524 (debe devolver 3087)
