@@ -15,17 +15,17 @@ public class Kaprekar {
         }
         List<Integer> lista1=ordenarMaximo(numDivEnteros);
         List<Integer> lista2=ordenarMinimo(numDivEnteros);
-        int numero1=0;
-        int numero2=0;
-        numero1+=lista1.get(0)*1000;
+        int numero1;
+        int numero2;
+        numero1=lista1.get(0)*1000;
         numero1+=lista1.get(1)*100;
         numero1+=lista1.get(2)*10;
         numero1+=lista1.get(3);
-        numero2+=lista2.get(0)*1000;
+        numero2=lista2.get(0)*1000;
         numero2+=lista2.get(1)*100;
         numero2+=lista2.get(2)*10;
         numero2+=lista2.get(3);
-
+        System.out.println(numero1 + "+" + numero2);
         return numero1 - numero2;
     }
 
@@ -41,7 +41,8 @@ public class Kaprekar {
     }
 
     private List<Integer> ordenarMaximo(List<Integer> numDivEnteros) {
-        Collections.sort(numDivEnteros,Collections.reverseOrder());
+        Collections.sort(numDivEnteros);
+        Collections.reverse(numDivEnteros);
         return numDivEnteros;
     }
 
