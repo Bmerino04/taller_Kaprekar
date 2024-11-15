@@ -7,6 +7,10 @@ import org.junit.jupiter.api.Test;
 class KaprekarTest {
 
     private static Kaprekar k;
+    @BeforeAll
+    public static void setUp() {
+        k = new Kaprekar();
+    }
 
     @Test
     public void testKaprekarOperation1() {

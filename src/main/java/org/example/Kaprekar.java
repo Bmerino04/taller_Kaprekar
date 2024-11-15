@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -27,24 +26,26 @@ public class Kaprekar {
         numero2+=lista2.get(2)*10;
         numero2+=lista2.get(3);
 
-        restar(numero1,numero2);
-
-
-
+        return numero1 - numero2;
     }
 
     private int restar(int maximo, int minimo) {
         int variable=0;
-        int
         variable=maximo-minimo;
+        return 0;
     }
 
     private List<Integer> ordenarMinimo(List<Integer> numDivEnteros) {
         Collections.sort(numDivEnteros);
-
+        return numDivEnteros;
     }
 
     private List<Integer> ordenarMaximo(List<Integer> numDivEnteros) {
         Collections.sort(numDivEnteros,Collections.reverseOrder());
+        return numDivEnteros;
+    }
+
+    public int itKaprekar(int num){
+        return 0;
     }
 }
