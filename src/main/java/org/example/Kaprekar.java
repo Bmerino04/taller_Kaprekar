@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Kaprekar {
@@ -13,14 +14,14 @@ public class Kaprekar {
         for (String num:numerosDivididos){
             numDivEnteros.add(Integer.parseInt(num));
         }
-        List<Integer> lista1=ordenarMaximo(numDivEnteros);
-        List<Integer> lista2=ordenarMinimo(numDivEnteros);
+        List<Integer> lista1=ordenar(numDivEnteros);
+        List<Integer> lista2=ordenar(numDivEnteros);
         int numero1;
         int numero2;
-        numero1=lista1.get(0)*1000;
-        numero1+=lista1.get(1)*100;
-        numero1+=lista1.get(2)*10;
-        numero1+=lista1.get(3);
+        numero1=lista1.get(3)*1000;
+        numero1+=lista1.get(2)*100;
+        numero1+=lista1.get(1)*10;
+        numero1+=lista1.get(0);
         numero2=lista2.get(0)*1000;
         numero2+=lista2.get(1)*100;
         numero2+=lista2.get(2)*10;
@@ -35,14 +36,8 @@ public class Kaprekar {
         return 0;
     }
 
-    private List<Integer> ordenarMinimo(List<Integer> numDivEnteros) {
+    private List<Integer> ordenar(List<Integer> numDivEnteros) {
         Collections.sort(numDivEnteros);
-        return numDivEnteros;
-    }
-
-    private List<Integer> ordenarMaximo(List<Integer> numDivEnteros) {
-        Collections.sort(numDivEnteros);
-        Collections.reverse(numDivEnteros);
         return numDivEnteros;
     }
 
